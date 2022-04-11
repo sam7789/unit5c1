@@ -19,7 +19,7 @@ function App() {
       return{...prevState, [key]: prevState[key] + value}
     })
   }
-  const balls = state.ball > 0 ? (state.ball/6).toFixed(3): state.ball;
+  const balls = state.ball > 0 ? `${Math.floor(state.ball/6)+"."+(state.ball%6)}`: state.ball;
   return (
     <div className="App">
       <h3>India:</h3>
